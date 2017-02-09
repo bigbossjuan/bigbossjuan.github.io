@@ -1,0 +1,1166 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Javascript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ヾ旧时光" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="一、新浪云1.登录新浪云    如果有微博账号的可以直接用微博账号登录即可
+2.点击云应用SAE
+3.点击进入控制台
+4.点击创建新应用
+5.设置部署环境(二级域名可以自己随意添加)
+6.获得Git仓库信息还有部署说明
+7.打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中12345(1)git init 配置git环境(2)git add . 把文件加入到缓存区(3)git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新浪云+微信JSSDK">
+<meta property="og:url" content="http://yoursite.com/2016/12/08/新浪云+微信JSSDK/index.html">
+<meta property="og:site_name" content="ヾ旧时光">
+<meta property="og:description" content="一、新浪云1.登录新浪云    如果有微博账号的可以直接用微博账号登录即可
+2.点击云应用SAE
+3.点击进入控制台
+4.点击创建新应用
+5.设置部署环境(二级域名可以自己随意添加)
+6.获得Git仓库信息还有部署说明
+7.打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中12345(1)git init 配置git环境(2)git add . 把文件加入到缓存区(3)git">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/If18R*RFrSMAknMi5fLYuxmuvWZSHr5l1F0QNP.evAA!/b/dHcBAAAAAAAA&bo=MwKnAAAAAAADALM!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/Bmw3a5zzL3laIsK2.xKSXBvHwUcicf3xx68L2hufVHM!/b/dN4AAAAAAAAA&bo=RAF.AAAAAAADAB4!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/SM764hsk1wQTA1j9JrxSCe9d2C6.OMY3i1cP7zAUD3g!/b/dHoBAAAAAAAA&bo=awIAAQAAAAADAE0!&rf=viewer_4">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/l7wIj0QgRThYhCdmLUq9yNBuHA*m.K3Xyq4ttEVYeKc!/b/dN0AAAAAAAAA&bo=lgLRAAAAAAADAGA!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/7fvuUjZT*xC9n7hs7RN8Plzi5hBJpJ1DmYpw6GMX5mE!/b/dHcBAAAAAAAA&bo=PAJXAgAAAAADAE4!&rf=viewer_4">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/ctcXMr5tCLKs3mHQqcxHqul9fiSTS1pcVKL5VYI8erM!/b/dN0AAAAAAAAA&bo=WALLAQAAAAADALU!&rf=viewer_4">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/qYEsRXxTCfY5ba1yz1M9uwoZyt3bR1WqxZ2evtrTlXM!/b/dNwAAAAAAAAA&bo=rQPJAAAAAAADAEI!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/2sVYiuqx8jTiRjkAzEphxakOnWWJsjTUdkg0b7CQkW4!/b/dHcBAAAAAAAA&bo=1gHCAQAAAAADADE!&rf=viewer_4">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/pRO8xEx5mM21rCp4cd8.2gW*YnBo1NEAU5AxL6r6pGc!/b/dHkBAAAAAAAA&bo=PQLFAAAAAAADAN8!&rf=viewer_4">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/r1oGFeP8i8m6.jrgKD9oL3szy.R0dqqD7J3dTK2l.gc!/b/dN0AAAAAAAAA&bo=vAK9AAAAAAADACY!&rf=viewer_4">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/qagyp2elqo6i2sLzZdp6oYQLScphcQAUY5xetHAIsuE!/m/dAkBAAAAAAAA&bo=8QB3AAAAAAADB6Q!&rf=photolist">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/m2iHZWDUnmnaHE2S6X8HeeLqr38rAinvKixnPQHmFFw!/m/dOEAAAAAAAAA&bo=3gPYAAAAAAADByc!&rf=photolist">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/mx0RAbOlKcyOGxWf36*9Thdbe53.Akou73vDRgRgWj0!/m/dN4AAAAAAAAA&bo=LQHwAAAAAAADB*4!&rf=photolist">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/MWEJ1q1CDjOYlYlb8V6Jd5PoBe8OP.vzAcHxXYEchaA!/m/dI0BAAAAAAAA&bo=zwDYAAAAAAADBzU!&rf=photolist">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/LB6Z7LY3rjkafz4mhG5tWtVs3QSQxetlx8p*Yl2rGdY!/m/dHwBAAAAAAAA&bo=6gBVAAAAAAADB50!&rf=photolist">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V11mx6TD0YZt7E/BT*9W*fJz26JUyBRVjYPyNReKzP2W3L30u3JS9luVFE!/m/dI8AAAAAAAAA&bo=8wGZAAAAAAADB0k!&rf=photolist">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/ZkJVZD7wogNK93fd8RlkFnTi9br8PX7xEIwhuzZxcwE!/b/dHgBAAAAAAAA&bo=AgM.AAAAAAADBx0!&rf=viewer_4">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/HOlTf5LhY3CRY4MzSpN85.JETnFdM6HooU0jT3Utw0s!/m/dHkBAAAAAAAA&bo=WQNRAgAAAAADBys!&rf=photolist">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/2SkENur5W9E*uT8SX0GYS391K87McieFsaHjCS9ywxQ!/b/dHkBAAAAAAAA&bo=AQOyAAAAAAADAJU!&rf=viewer_4">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/EBOIm3W10MHPCdcjmGkZ1eUVK3vGYZfGd.Khr3Nd4N4!/b/dI8AAAAAAAAA&bo=xgCBAAAAAAADAGI!&rf=viewer_4">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/YNSQfkRYHEQcRuTHXWszQ.8oiMp5BqbhdXTOZqpU398!/b/dAkBAAAAAAAA&bo=gwJcAAAAAAADAPg!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/3Y7CNlJJaOd6I44BtNDGWWWPp8LUY28gWtpX8RLTdAc!/m/dHgBAAAAAAAA&bo=zAKFAAAAAAADB2k!&rf=photolist">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/qagyp2elqo6i2sLzZdp6oYQLScphcQAUY5xetHAIsuE!/m/dAkBAAAAAAAA&bo=8QB3AAAAAAADB6Q!&rf=photolist">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/H.gefrCrzrx5b*7t7pDwmOigXQLxkYfn4F*2bKLM6Uc!/b/dHkBAAAAAAAA&bo=7AHwAAAAAAADADg!&rf=viewer_4">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/w6FjwbVKPSWU6vi8HzErro1T*k2T3BNiX.ISzFz9TCI!/b/dHgBAAAAAAAA&bo=HgGBAAAAAAADALs!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/yYUTIvVA.BMODe.ke3K*KBgp1cTL7iFpidYVohRBP8M!/b/dOEAAAAAAAAA&bo=1gJLAQAAAAADALs!&rf=viewer_4">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V11mx6TD0YZt7E/Zv3eg2muGmApyrl3c7yCGPZQTJ*MgsGYUyThG7q*p2A!/m/dI8AAAAAAAAA&bo=swN6AQAAAAADB.k!&rf=photolist">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V11mx6TD0YZt7E/2fPVGKYxl6dFhB3aNsxYKbwdrndiVfepAHGzMQ4TM80!/m/dHcBAAAAAAAA&bo=xAL6AAAAAAADBx4!&rf=photolist">
+<meta property="og:updated_time" content="2017-02-08T07:48:52.498Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新浪云+微信JSSDK">
+<meta name="twitter:description" content="一、新浪云1.登录新浪云    如果有微博账号的可以直接用微博账号登录即可
+2.点击云应用SAE
+3.点击进入控制台
+4.点击创建新应用
+5.设置部署环境(二级域名可以自己随意添加)
+6.获得Git仓库信息还有部署说明
+7.打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中12345(1)git init 配置git环境(2)git add . 把文件加入到缓存区(3)git">
+<meta name="twitter:image" content="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/If18R*RFrSMAknMi5fLYuxmuvWZSHr5l1F0QNP.evAA!/b/dHcBAAAAAAAA&bo=MwKnAAAAAAADALM!&rf=viewer_4">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/08/新浪云+微信JSSDK/"/>
+
+
+
+
+
+  <title> 新浪云+微信JSSDK | ヾ旧时光 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">ヾ旧时光</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/08/新浪云+微信JSSDK/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="WLJ">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/22462143?v=3&s=460">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="ヾ旧时光">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="ヾ旧时光" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                新浪云+微信JSSDK
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-08T15:26:16+08:00">
+                2016-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/08/新浪云+微信JSSDK/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/08/新浪云+微信JSSDK/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/12/08/新浪云+微信JSSDK/" class="leancloud_visitors" data-flag-title="新浪云+微信JSSDK">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一、新浪云"><a href="#一、新浪云" class="headerlink" title="一、新浪云"></a>一、新浪云</h3><h6 id="1-登录新浪云"><a href="#1-登录新浪云" class="headerlink" title="1.登录新浪云"></a>1.登录新浪云</h6><p><img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/If18R*RFrSMAknMi5fLYuxmuvWZSHr5l1F0QNP.evAA!/b/dHcBAAAAAAAA&amp;bo=MwKnAAAAAAADALM!&amp;rf=viewer_4" alt="image"><br>    如果有微博账号的可以直接用微博账号登录即可</p>
+<h6 id="2-点击云应用SAE"><a href="#2-点击云应用SAE" class="headerlink" title="2.点击云应用SAE"></a>2.点击云应用SAE</h6><p><img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/Bmw3a5zzL3laIsK2.xKSXBvHwUcicf3xx68L2hufVHM!/b/dN4AAAAAAAAA&amp;bo=RAF.AAAAAAADAB4!&amp;rf=viewer_4" alt="image"></p>
+<h6 id="3-点击进入控制台"><a href="#3-点击进入控制台" class="headerlink" title="3.点击进入控制台"></a>3.点击进入控制台</h6><p><img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/SM764hsk1wQTA1j9JrxSCe9d2C6.OMY3i1cP7zAUD3g!/b/dHoBAAAAAAAA&amp;bo=awIAAQAAAAADAE0!&amp;rf=viewer_4" alt="image"></p>
+<h6 id="4-点击创建新应用"><a href="#4-点击创建新应用" class="headerlink" title="4.点击创建新应用"></a>4.点击创建新应用</h6><p><img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/l7wIj0QgRThYhCdmLUq9yNBuHA*m.K3Xyq4ttEVYeKc!/b/dN0AAAAAAAAA&amp;bo=lgLRAAAAAAADAGA!&amp;rf=viewer_4" alt="image"></p>
+<h6 id="5-设置部署环境-二级域名可以自己随意添加"><a href="#5-设置部署环境-二级域名可以自己随意添加" class="headerlink" title="5.设置部署环境(二级域名可以自己随意添加)"></a>5.设置部署环境(二级域名可以自己随意添加)</h6><p><img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/7fvuUjZT*xC9n7hs7RN8Plzi5hBJpJ1DmYpw6GMX5mE!/b/dHcBAAAAAAAA&amp;bo=PAJXAgAAAAADAE4!&amp;rf=viewer_4" alt="image"></p>
+<h6 id="6-获得Git仓库信息还有部署说明"><a href="#6-获得Git仓库信息还有部署说明" class="headerlink" title="6.获得Git仓库信息还有部署说明"></a>6.获得Git仓库信息还有部署说明</h6><p><img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/ctcXMr5tCLKs3mHQqcxHqul9fiSTS1pcVKL5VYI8erM!/b/dN0AAAAAAAAA&amp;bo=WALLAQAAAAADALU!&amp;rf=viewer_4" alt="image"></p>
+<h6 id="7-打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中"><a href="#7-打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中" class="headerlink" title="7.打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中"></a>7.打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(1)git init 配置git环境</div><div class="line">(2)git add . 把文件加入到缓存区</div><div class="line">(3)git commit -m <span class="string">"注释"</span></div><div class="line">(4)$ git remote add sae https://git.sinacloud.com/biga</div><div class="line">(5)$ git push sae master:1</div></pre></td></tr></table></figure>
+<h6 id="8-只需在新浪云页面刷新一下页面"><a href="#8-只需在新浪云页面刷新一下页面" class="headerlink" title="8.只需在新浪云页面刷新一下页面"></a>8.只需在新浪云页面刷新一下页面</h6><p><img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/qYEsRXxTCfY5ba1yz1M9uwoZyt3bR1WqxZ2evtrTlXM!/b/dNwAAAAAAAAA&amp;bo=rQPJAAAAAAADAEI!&amp;rf=viewer_4" alt="image"></p>
+<h6 id="9-点击链接"><a href="#9-点击链接" class="headerlink" title="9.点击链接"></a>9.点击链接</h6><p>注意：当一个后台应用服务器访问的时候默认都是优先找index开头的文件，所以可能进去是直接在根目录下面是访问不到的<br>但是可以自己手动添加路径</p>
+<h6 id="10-可以使用二维码生成器，制作二维码"><a href="#10-可以使用二维码生成器，制作二维码" class="headerlink" title="10.可以使用二维码生成器，制作二维码"></a>10.可以使用二维码生成器，制作二维码</h6><p><img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/2sVYiuqx8jTiRjkAzEphxakOnWWJsjTUdkg0b7CQkW4!/b/dHcBAAAAAAAA&amp;bo=1gHCAQAAAAADADE!&amp;rf=viewer_4" alt="image"></p>
+<h3 id="二、微信公众号"><a href="#二、微信公众号" class="headerlink" title="二、微信公众号"></a>二、微信公众号</h3><p>微信JSSDK是什么？以及使用流程？</p>
+<p>如果项目需要使用微信提供的一些功能，例如：分享、定位、扫一扫、支付、等，就需要借助微信JSSDK来实现这些功能</p>
+<p>使用流程：<br>1.将自己项目的域名添加到微信公众账号中，设置为安全域名<br>2.在代码中引入JSSDK所需的js文件<br>3.进行配置: wx.config({debug: true, appId: ‘’, timestamp: ‘’, nonceStr: ‘’, signature: ‘’, jsApiList: []});<br>4.调用JSSDK提供的方法进行调用</p>
+<h6 id="（一）先注册一个微信公众号"><a href="#（一）先注册一个微信公众号" class="headerlink" title="（一）先注册一个微信公众号"></a>（一）先注册一个微信公众号</h6><p>1.打开微信公众平台<br><img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/pRO8xEx5mM21rCp4cd8.2gW*YnBo1NEAU5AxL6r6pGc!/b/dHkBAAAAAAAA&amp;bo=PQLFAAAAAAADAN8!&amp;rf=viewer_4" alt="image"><br>2.点击立即注册 </p>
+<p>3.点击订阅号<br><img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/r1oGFeP8i8m6.jrgKD9oL3szy.R0dqqD7J3dTK2l.gc!/b/dN0AAAAAAAAA&amp;bo=vAK9AAAAAAADACY!&amp;rf=viewer_4" alt="image"><br>4.然后填写信息，在选择类型的时候，选择个人  </p>
+<h6 id="（二）微信JS-SDK"><a href="#（二）微信JS-SDK" class="headerlink" title="（二）微信JS-SDK"></a>（二）微信JS-SDK</h6><p>1.点击开发者工具<br><img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/qagyp2elqo6i2sLzZdp6oYQLScphcQAUY5xetHAIsuE!/m/dAkBAAAAAAAA&amp;bo=8QB3AAAAAAADB6Q!&amp;rf=photolist" alt="image"><br>2.点击进入开发者文档<br><img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/m2iHZWDUnmnaHE2S6X8HeeLqr38rAinvKixnPQHmFFw!/m/dOEAAAAAAAAA&amp;bo=3gPYAAAAAAADByc!&amp;rf=photolist" alt="image"></p>
+<p>  3.点击微信网页开发</p>
+<p>   <img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/mx0RAbOlKcyOGxWf36*9Thdbe53.Akou73vDRgRgWj0!/m/dN4AAAAAAAAA&amp;bo=LQHwAAAAAAADB*4!&amp;rf=photolist" alt="image"> </p>
+<p>  4.点击微信JS-SDK说明文档</p>
+<p>  <img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/MWEJ1q1CDjOYlYlb8V6Jd5PoBe8OP.vzAcHxXYEchaA!/m/dI0BAAAAAAAA&amp;bo=zwDYAAAAAAADBzU!&amp;rf=photolist" alt="image"></p>
+<p> 然后回到主页面点击公众号设置   </p>
+<p>   <img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/LB6Z7LY3rjkafz4mhG5tWtVs3QSQxetlx8p*Yl2rGdY!/m/dHwBAAAAAAAA&amp;bo=6gBVAAAAAAADB50!&amp;rf=photolist" alt="image"></p>
+<p> 点击功能设置进入JS接口安全域名   </p>
+<p>   <img src="http://a4.qpic.cn/psb?/V11mx6TD0YZt7E/BT*9W*fJz26JUyBRVjYPyNReKzP2W3L30u3JS9luVFE!/m/dI8AAAAAAAAA&amp;bo=8wGZAAAAAAADB0k!&amp;rf=photolist" alt="image"><br> <img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/ZkJVZD7wogNK93fd8RlkFnTi9br8PX7xEIwhuzZxcwE!/b/dHgBAAAAAAAA&amp;bo=AgM.AAAAAAADBx0!&amp;rf=viewer_4" alt="image">  </p>
+<p> 然后到新浪云中把刚刚得到的那个链接粘贴过来放到域名X中，然后点击下载MP文件再放到我们上传到新浪云的文件中，然后再重新进行一遍上传操作  </p>
+<p><img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/HOlTf5LhY3CRY4MzSpN85.JETnFdM6HooU0jT3Utw0s!/m/dHkBAAAAAAAA&amp;bo=WQNRAgAAAAADBys!&amp;rf=photolist" alt="image">  </p>
+<p> 又回到JS-SDK说明文档的页面，看起来会觉得特别繁琐，但是没关系，我们可以直接翻到最后面，就会看到一个实例代码，然后进行下载<br><img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/2SkENur5W9E*uT8SX0GYS391K87McieFsaHjCS9ywxQ!/b/dHkBAAAAAAAA&amp;bo=AQOyAAAAAAADAJU!&amp;rf=viewer_4" alt="image">  </p>
+<p>然后打开文档，会看到php文件，因为一开始我们选择的就是php服务端，然后里面还会有一个sample.php的文件，里面就是示例代码了，已经帮我们写好了  </p>
+<p>  <img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/EBOIm3W10MHPCdcjmGkZ1eUVK3vGYZfGd.Khr3Nd4N4!/b/dI8AAAAAAAAA&amp;bo=xgCBAAAAAAADAGI!&amp;rf=viewer_4" alt="image">  </p>
+<p>  在上传到新浪云的文件中打开index.html,比如想要实现点击选取照片按钮，就会访问到相册的功能，就是绑定click事件，函数名就是openWeiixn  </p>
+<p>  <img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/YNSQfkRYHEQcRuTHXWszQ.8oiMp5BqbhdXTOZqpU398!/b/dAkBAAAAAAAA&amp;bo=gwJcAAAAAAADAPg!&amp;rf=viewer_4" alt="image">  </p>
+<p>  然后把之前下载的php文件中的四个粘贴过来到本地新浪云的文件中<br>把里面的sample.php名字改为weixin.php,因为上面的事件函数就是openWeiixn的函数里面的链接到weixin.php<br>然后把AppID和AppSecret换成我们的密钥信息  </p>
+<p>  <img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/3Y7CNlJJaOd6I44BtNDGWWWPp8LUY28gWtpX8RLTdAc!/m/dHgBAAAAAAAA&amp;bo=zAKFAAAAAAADB2k!&amp;rf=photolist" alt="image">  </p>
+<p>  密钥需要显示，自己安全验证   </p>
+<p>  <img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/qagyp2elqo6i2sLzZdp6oYQLScphcQAUY5xetHAIsuE!/m/dAkBAAAAAAAA&amp;bo=8QB3AAAAAAADB6Q!&amp;rf=photolist" alt="image"><br><img src="http://a3.qpic.cn/psb?/V11mx6TD0YZt7E/H.gefrCrzrx5b*7t7pDwmOigXQLxkYfn4F*2bKLM6Uc!/b/dHkBAAAAAAAA&amp;bo=7AHwAAAAAAADADg!&amp;rf=viewer_4" alt="image"></p>
+<p>把自己想要的功能接口粘贴到jsApiList  </p>
+<p>  <img src="http://a2.qpic.cn/psb?/V11mx6TD0YZt7E/w6FjwbVKPSWU6vi8HzErro1T*k2T3BNiX.ISzFz9TCI!/b/dHgBAAAAAAAA&amp;bo=HgGBAAAAAAADALs!&amp;rf=viewer_4" alt="image"></p>
+<p>  然后在接口内容粘贴过来到wx.ready的函数中  </p>
+<p>  <img src="http://a1.qpic.cn/psb?/V11mx6TD0YZt7E/yYUTIvVA.BMODe.ke3K*KBgp1cTL7iFpidYVohRBP8M!/b/dOEAAAAAAAAA&amp;bo=1gJLAQAAAAADALs!&amp;rf=viewer_4" alt="image">   </p>
+<p>  最后就可以预览了，如果报错可以查看文档<br> <img src="http://a4.qpic.cn/psb?/V11mx6TD0YZt7E/Zv3eg2muGmApyrl3c7yCGPZQTJ*MgsGYUyThG7q*p2A!/m/dI8AAAAAAAAA&amp;bo=swN6AQAAAAADB.k!&amp;rf=photolist" alt="image">  </p>
+<p>把最后的特殊问题复制到我们刚刚的weixin.php文件中  </p>
+<p><img src="http://a4.qpic.cn/psb?/V11mx6TD0YZt7E/2fPVGKYxl6dFhB3aNsxYKbwdrndiVfepAHGzMQ4TM80!/m/dHcBAAAAAAAA&amp;bo=xAL6AAAAAAADBx4!&amp;rf=photolist" alt="image"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="WLJ WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="WLJ Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/18/css3新属性和动画/" rel="next" title="CSS3新属性和动画">
+                <i class="fa fa-chevron-left"></i> CSS3新属性和动画
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/08/node.js/" rel="prev" title="NodeJs">
+                NodeJs <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/08/新浪云+微信JSSDK/"
+           data-title="新浪云+微信JSSDK" data-url="http://yoursite.com/2016/12/08/新浪云+微信JSSDK/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/22462143?v=3&s=460"
+               alt="WLJ" />
+          <p class="site-author-name" itemprop="name">WLJ</p>
+          <p class="site-description motion-element" itemprop="description">傻乎乎的努力只能让你成为劳模，而我要的是优秀．</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/bigbossjuan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/SidCN" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/3266653350/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、新浪云"><span class="nav-number">1.</span> <span class="nav-text">一、新浪云</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-登录新浪云"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1.登录新浪云</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-点击云应用SAE"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2.点击云应用SAE</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-点击进入控制台"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3.点击进入控制台</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-点击创建新应用"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">4.点击创建新应用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-设置部署环境-二级域名可以自己随意添加"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">5.设置部署环境(二级域名可以自己随意添加)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-获得Git仓库信息还有部署说明"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">6.获得Git仓库信息还有部署说明</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">7.打开本地文件夹使用git命令然后使用git信息把该文件夹部署到新浪云中</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#8-只需在新浪云页面刷新一下页面"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">8.只需在新浪云页面刷新一下页面</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#9-点击链接"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">9.点击链接</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#10-可以使用二维码生成器，制作二维码"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">10.可以使用二维码生成器，制作二维码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、微信公众号"><span class="nav-number">2.</span> <span class="nav-text">二、微信公众号</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（一）先注册一个微信公众号"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">（一）先注册一个微信公众号</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（二）微信JS-SDK"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">（二）微信JS-SDK</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WLJ</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数  <i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv">本站总访问量  <i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wulijuan"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("tO6J6v18W8zi83AYQL1ul34f-gzGzoHsz", "eOSt1zI1m8ShQd0HDBi9BdDj");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>

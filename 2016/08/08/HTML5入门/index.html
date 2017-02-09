@@ -1,0 +1,1199 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ヾ旧时光" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="一、基本页面结构（H5新标签）页头：
+1&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;
+页面主体：
+1&amp;lt;main&amp;gt;&amp;lt;/main&amp;gt;
+划分页面子区域：
+1&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;
+解释了什么是WWF  
+1234&amp;lt;section&amp;gt;    &amp;lt;h1&amp;gt;WWF&amp;lt;/h1&amp;gt;    &amp;lt;p&amp;gt;The">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5入门">
+<meta property="og:url" content="http://yoursite.com/2016/08/08/HTML5入门/index.html">
+<meta property="og:site_name" content="ヾ旧时光">
+<meta property="og:description" content="一、基本页面结构（H5新标签）页头：
+1&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;
+页面主体：
+1&amp;lt;main&amp;gt;&amp;lt;/main&amp;gt;
+划分页面子区域：
+1&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;
+解释了什么是WWF  
+1234&amp;lt;section&amp;gt;    &amp;lt;h1&amp;gt;WWF&amp;lt;/h1&amp;gt;    &amp;lt;p&amp;gt;The">
+<meta property="og:updated_time" content="2017-02-09T06:09:52.257Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5入门">
+<meta name="twitter:description" content="一、基本页面结构（H5新标签）页头：
+1&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;
+页面主体：
+1&amp;lt;main&amp;gt;&amp;lt;/main&amp;gt;
+划分页面子区域：
+1&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;
+解释了什么是WWF  
+1234&amp;lt;section&amp;gt;    &amp;lt;h1&amp;gt;WWF&amp;lt;/h1&amp;gt;    &amp;lt;p&amp;gt;The">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/08/08/HTML5入门/"/>
+
+
+
+
+
+  <title> HTML5入门 | ヾ旧时光 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">ヾ旧时光</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/08/HTML5入门/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="WLJ">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/22462143?v=3&s=460">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="ヾ旧时光">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="ヾ旧时光" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML5入门
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-08T11:02:40+08:00">
+                2016-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/08/08/HTML5入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/HTML5入门/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/08/08/HTML5入门/" class="leancloud_visitors" data-flag-title="HTML5入门">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一、基本页面结构（H5新标签）"><a href="#一、基本页面结构（H5新标签）" class="headerlink" title="一、基本页面结构（H5新标签）"></a>一、基本页面结构（H5新标签）</h3><p>页头：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;header&gt;&lt;/header&gt;</div></pre></td></tr></table></figure>
+<p>页面主体：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;main&gt;&lt;/main&gt;</div></pre></td></tr></table></figure>
+<p>划分页面子区域：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;section&gt;&lt;/section&gt;</div></pre></td></tr></table></figure>
+<p>解释了什么是WWF  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;section&gt;</div><div class="line">    &lt;h1&gt;WWF&lt;/h1&gt;</div><div class="line">    &lt;p&gt;The World Wide Fund <span class="keyword">for</span> Nature (WWF) is....&lt;/p&gt;</div><div class="line">&lt;/section&gt;</div></pre></td></tr></table></figure>
+<p>页脚：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;footer&gt;&lt;/footer&gt;</div></pre></td></tr></table></figure>
+<p>版权：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;address&gt;&lt;/address&gt;</div></pre></td></tr></table></figure>
+<p>定义带有标签的文本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;mark&gt;&lt;/mark&gt;</div></pre></td></tr></table></figure>
+<p>部分文本高亮显示:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;Do not forget to buy &lt;mark&gt;milk&lt;/mark&gt; today.&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>时间：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;time&gt;&lt;/time&gt;</div></pre></td></tr></table></figure>
+<p>文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;article&gt;&lt;/article&gt;用article可以打破搜索引擎对h1标签的限制</div></pre></td></tr></table></figure>
+<p>广告：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;aside&gt;&lt;/aside&gt;展示和当前页面关系不大的内容（广告）</div></pre></td></tr></table></figure>
+<p>分割线：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;hr/&gt;</div></pre></td></tr></table></figure>
+<p>提示框：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;datalist&gt;&lt;/datalist&gt;</div></pre></td></tr></table></figure>
+<p>option在提示框中展示的数据条目，value属性的值或在用户按下<br>回车后填写进输入框，option的值会在条目侯勇浅灰色的字体显示<br>用list和id设置一样的值来绑定  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input list=<span class="string">"device"</span> /&gt;</div><div class="line">    &lt;datalist id=<span class="string">'device'</span>&gt;</div><div class="line">    &lt;option value=<span class="string">"iPhone"</span>&gt;iphone 7&lt;/option&gt;</div><div class="line">    &lt;option value=<span class="string">"ipad"</span>&gt;&lt;/option&gt;</div><div class="line">    &lt;option value=<span class="string">"imac"</span>&lt;/option&gt;</div><div class="line">    &lt;/datalist&gt;</div></pre></td></tr></table></figure>
+<p>为input元素定义标注：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;label&gt;&lt;/label&gt;</div></pre></td></tr></table></figure>
+<p>label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可<br>用性。如果您在 label 元素内点击文本，就会触发此控件。就是说，当用<br>户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。<br>要把label和input绑定就要把label中的for中的值跟input中的id设置相同  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;label <span class="keyword">for</span>=<span class="string">""</span>&gt;用户&lt;/label&gt;</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">""</span> id=<span class="string">""</span> /&gt;</div></pre></td></tr></table></figure>
+<p>提示和注释：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;details&gt;&lt;/details&gt;</div></pre></td></tr></table></figure>
+<p>要与summery相配合使用，如果不用<br>summery就是默认的标题，就是详细信息，而如果用summery就会更改默认<br>的标题，默认只能看见标题，如果展开就会看见details中的内容，如果想<br>要一进去就是看见展开的效果，就可以给details添加一个属性open，因为<br>属性和属性值都是open，所以可以省略写只写一个就可以，以后只要是这<br>种类似的都可以这样简写。</p>
+<p>包裹图片、音频、视频：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;figure&gt;&lt;/figure&gt;</div></pre></td></tr></table></figure>
+<p>使用figcaption来给图片添<br>加标题或讲解。  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;figure&gt;</div><div class="line">    &lt;img src=<span class="string">""</span> /&gt;</div><div class="line">    &lt;figcaption id=<span class="string">""</span>&gt;			</div><div class="line">    &lt;/figcaption&gt;</div><div class="line">&lt;/figure&gt;</div></pre></td></tr></table></figure>
+<p>进度条：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;progress&gt;&lt;/progress&gt;</div></pre></td></tr></table></figure>
+<p>有两个重要的属性，一个是value是当前<br>值，还有一个是max是指完成的总值  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;progress value=<span class="string">"50"</span> max=<span class="string">"100"</span>&gt;</div><div class="line">&lt;/progress&gt;</div></pre></td></tr></table></figure>
+<h3 id="二、新表单元素"><a href="#二、新表单元素" class="headerlink" title="二、新表单元素"></a>二、新表单元素</h3><p>旧的回顾：  单选框：radio  </p>
+<p>用name值来分组，如果不设置name值相同，就不是单选了，就<br>可以同时选择多个选项  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">男：&lt;input <span class="built_in">type</span>=<span class="string">"radio"</span>name=<span class="string">"gender"</span> value=<span class="string">"man"</span>/&gt;</div><div class="line">女：&lt;input <span class="built_in">type</span>=<span class="string">"radio"</span> name=<span class="string">"gender"</span> value=<span class="string">"woman"</span>/&gt;</div><div class="line"></div><div class="line">复选框：checkbox  </div><div class="line"></div><div class="line">游泳：&lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> value=<span class="string">"youyong"</span>/&gt;</div><div class="line">篮球：&lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> value=<span class="string">"lanqiu"</span>/&gt;</div></pre></td></tr></table></figure>
+<p>上传文件：file，但是只能选择一个文件，如果想要<br>选择多个文件就可以添加一个属性，就是multiple，这个属性也是可以<br>缩写成一个属性  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"file"</span> multiple/&gt;</div></pre></td></tr></table></figure>
+<p>表单重置：reset<br>因为用户体验不太好（总是会把登录和重置搞错），所以现在就不怎么<br>用了，所以见得少  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"reset"</span> value=<span class="string">"重置"</span>/&gt;</div></pre></td></tr></table></figure>
+<p>多行输入框：textarea  </p>
+<p>有两个属性：rows和cols可以用来控制输入框的大小，但是一般不用它<br>们来控制，一般都是用width和height，因为这样对页面结构好掌控，因<br>为页面都是以px像素来做的，不然不好控制。  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;textarea name=<span class="string">""</span> rows=<span class="string">"8"</span> cols=<span class="string">"40"</span>&gt;&lt;/textarea&gt;</div></pre></td></tr></table></figure>
+<p>下拉菜单：select,如果想多选也是可以加multiple这个属性，但是一般<br>不用这么做，因为可以直接使用多选按钮  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;select class=<span class="string">""</span> name=<span class="string">""</span> multiple&gt;</div><div class="line">    &lt;option value=<span class="string">"iphone"</span>&gt;iphone&lt;/option&gt;</div><div class="line">    &lt;option value=<span class="string">"ipad"</span>&gt;ipad&lt;/option&gt;</div><div class="line">    &lt;option value=<span class="string">"ipod"</span>&gt;iMac&lt;/option&gt;</div><div class="line">&lt;/select&gt;</div></pre></td></tr></table></figure>
+<p>新的：  </p>
+<p>日期：date  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"date"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>时间：time  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"time"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>星期:week  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"week"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>月份：month   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"month"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>邮箱：email  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"email"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>网址：url  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"url"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>数值：number  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"number"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>范围：range，有三个属性，最小值min，最大值;max,还有一个就是步<br>调，一次移动多少。  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"range"</span> name=<span class="string">"name"</span> value=<span class="string">""</span> min=<span class="string">"0"</span> max=<span class="string">"100"</span> step=<span class="string">"50"</span>&gt;</div></pre></td></tr></table></figure>
+<p>颜色：color  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"color"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<p>搜素框：search  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"search"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+<h3 id="三、新标签属性"><a href="#三、新标签属性" class="headerlink" title="三、新标签属性"></a>三、新标签属性</h3><p>tabindex：用来设置标签可以通过tab按键选中通过这个属性可以设置<br>tab按键按下时选择标签顺序编号  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p tabindex=<span class="string">"1"</span>&gt;哈哈&lt;/p&gt;</div><div class="line">&lt;p tabindex=<span class="string">"2"</span>&gt;嘻嘻&lt;/p&gt;</div><div class="line">&lt;p tabindex=<span class="string">"3"</span>&gt;嘿嘿&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>required:如果某一个表单元素配置了该属性，则该元素必须有值，否则<br>数据无法提交  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;form class=<span class="string">""</span> action=<span class="string">"http://www.baidu.com"</span> method=<span class="string">"get"</span>&gt;</div><div class="line">  &lt;input <span class="built_in">type</span>=<span class="string">""</span> name=<span class="string">"name"</span> value=<span class="string">""</span> required&gt;</div><div class="line">  &lt;input <span class="built_in">type</span>=<span class="string">""</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div><div class="line">  &lt;input <span class="built_in">type</span>=<span class="string">"submit"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+<p>hidden隐藏且不占空间   </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p hidden&gt;啦啦&lt;/p&gt;</div></pre></td></tr></table></figure>
+<h3 id="四、隐藏方式的总结"><a href="#四、隐藏方式的总结" class="headerlink" title="四、隐藏方式的总结"></a>四、隐藏方式的总结</h3><p>1.给标签设置display:none,标签隐藏且不占页面位置  </p>
+<p>2.给标签设置opcity:0,标签隐藏但是占据页面位置  </p>
+<p>3.给标签设置宽高都为0，overflow:hidden，标签隐藏且不占<br>据页面位置  </p>
+<p>4.给标签设置visibility：hidden，标签隐藏但是占据页面位<br>置  </p>
+<h3 id="五、拖放"><a href="#五、拖放" class="headerlink" title="五、拖放"></a>五、拖放</h3><p>处理步骤：   </p>
+<p>a定义可拖动目标<br>b定义被拖动的数据，可能为多种不同格式<br>c允许设置拖拽效果<br>d定义放置区域<br>e在drop发生的时候做一些事情  </p>
+<p>1、拖拽目标的开始的拖拽事件：ondragstart  </p>
+<p>在开始拖拽事件中e对象中有一个dataTransfer属性，用来保存被拖动的数据<br>e.dataTransfer也是一个对象，可以保存数据，但是不能通过“.”语法<br>来访问和设置该属性，有getData和setData两个方法来进行设置和访问<br>该属性，可以保存一个或多个数据，在所有拖动事件中该属性都是可用<br>的，但是不能单独创建  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">img.ondragstart = <span class="keyword">function</span>(e)&#123;</div><div class="line">    e.dataTransfer.setData(<span class="string">"type/img"</span>,this.id);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2、拖拽目标的结束的拖拽事件：ondragend  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">img.ondragend = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">      console.log(<span class="string">"目标拖拽结束"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>3、拖拽目标进入当前标签：ondragenter  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">div1.ondragenter = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">          console.log(<span class="string">"目标进来了"</span>);</div><div class="line">          div1.style.boxShadow = <span class="string">"0 0 20px red"</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>4、拖拽目标在当前标签之上  </p>
+<p>div1.ondragover = function(){<br>      console.log(“djsaf”);<br>      return false;<br>}<br>5、拖拽离开事件  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">div1.ondragleave = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">      console.log(<span class="string">"拖拽离开了"</span>);</div><div class="line">      div1.style.boxShadow = <span class="string">"none"</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>6、拖拽松开事件  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">div1.ondrop = <span class="keyword">function</span>(e)&#123;</div><div class="line">         console.log(<span class="string">"目标放入"</span>);</div><div class="line">         var id = e.dataTransfer.getData(<span class="string">"type/img"</span>);</div><div class="line">         var img = document.querySelector(a);</div><div class="line">         this.appendChild(img);</div><div class="line">         img.style.position = <span class="string">'absolute'</span>;</div><div class="line">         img.style.top = <span class="string">"-"</span>+(img.offsetHeight-div1.offsetHeight)/2+<span class="string">"px;</span></div><div class="line">         img.style.left = "-<span class="string">"+(img.offsetWidth-div1.offsetWidtht)/2+"</span>px<span class="string">";</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="六、把电脑里的图片拖放到浏览器中"><a href="#六、把电脑里的图片拖放到浏览器中" class="headerlink" title="六、把电脑里的图片拖放到浏览器中"></a>六、把电脑里的图片拖放到浏览器中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">// 获取拖拽目的地的标签  </div><div class="line">    var wrap = document.querySelector(<span class="string">"#wrap"</span>);</div><div class="line">    // 给拖拽目的地添加enter和leave事件，修改css样式</div><div class="line">    wrap.ondragenter = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        this.style.backgroundColor = <span class="string">"gray"</span>;</div><div class="line">    &#125;</div><div class="line">    wrap.ondragleave = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">        this.style.backgroundColor = <span class="string">"white"</span>;</div><div class="line">    &#125;</div><div class="line">    // 取消over事假的默认事件，保证drop事件能被触发</div><div class="line">    wrap.ondragover = <span class="function"><span class="title">function</span></span>() &#123;</div><div class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;	</div><div class="line">    // 拿到拖拽目的地的drop事件，取消默认事件</div><div class="line">    wrap.ondrop = <span class="keyword">function</span>(e) &#123;		</div><div class="line">        // 松手后背景颜色变白</div><div class="line">        this.style.backgroundColor = <span class="string">"white"</span>;		</div><div class="line">        // 获取到拖拽进来的文件</div><div class="line">        var file = e.dataTransfer.files[0];</div><div class="line">        // 创建文件读取对象，来读取file中的数据。</div><div class="line">        var fileReader = new FileReader();</div><div class="line">        // 当文件读取对象读取完毕后，获取到读出来的数据</div><div class="line">        fileReader.onload = <span class="keyword">function</span> (e) &#123;</div><div class="line">            // 获取按照指定格式读取出来的数据</div><div class="line">            // 获取图片数据的方式</div><div class="line">            // 1、e.target.result;</div><div class="line">            // 2、fileReader.result;</div><div class="line">            var data = e.target.result;		    		</div><div class="line">            // 把读取出来的数据设置为div的背景图展示出来</div><div class="line">            wrap.style.background = <span class="string">"url("</span>+data+<span class="string">") no-repeat center"</span>;</div><div class="line">            wrap.innerText = <span class="string">''</span>;</div><div class="line">        &#125;		    </div><div class="line">        // 读取文件</div><div class="line">        fileReader.readAsDataURL(file)</div><div class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.jpg" alt="WLJ WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zhifubao.jpg" alt="WLJ Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/23/移动端Touch事件/" rel="next" title="Touch事件">
+                <i class="fa fa-chevron-left"></i> Touch事件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/18/css3新属性和动画/" rel="prev" title="CSS3新属性和动画">
+                CSS3新属性和动画 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/08/HTML5入门/"
+           data-title="HTML5入门" data-url="http://yoursite.com/2016/08/08/HTML5入门/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/22462143?v=3&s=460"
+               alt="WLJ" />
+          <p class="site-author-name" itemprop="name">WLJ</p>
+          <p class="site-description motion-element" itemprop="description">傻乎乎的努力只能让你成为劳模，而我要的是优秀．</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/bigbossjuan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/SidCN" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/3266653350/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、基本页面结构（H5新标签）"><span class="nav-number">1.</span> <span class="nav-text">一、基本页面结构（H5新标签）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、新表单元素"><span class="nav-number">2.</span> <span class="nav-text">二、新表单元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、新标签属性"><span class="nav-number">3.</span> <span class="nav-text">三、新标签属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、隐藏方式的总结"><span class="nav-number">4.</span> <span class="nav-text">四、隐藏方式的总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、拖放"><span class="nav-number">5.</span> <span class="nav-text">五、拖放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、把电脑里的图片拖放到浏览器中"><span class="nav-number">6.</span> <span class="nav-text">六、把电脑里的图片拖放到浏览器中</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">WLJ</span>
+</div>
+
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数  <i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv">本站总访问量  <i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wulijuan"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("tO6J6v18W8zi83AYQL1ul34f-gzGzoHsz", "eOSt1zI1m8ShQd0HDBi9BdDj");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
