@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Javascript," />
+  <meta name="keywords" content="框架," />
 
 
 
@@ -89,19 +89,19 @@
 
 
 
-<meta name="description" content="一、传统代码的缺陷传统的用script标签导入的JS文件，有可能会阻塞页面渲染，而且正常我们开发的时候会导入引入JS文件，都用script标签导入，很容易造成混乱，不容易维护
-二、什么是模块化模块在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。 为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编">
+<meta name="description" content="一、fis3是什么，能干什么？FIS3 是面向前端的工程构建工具，可以解决前端中的性能优化，其实也就和gulp差不多，只不过gulp是轻量级的，需要什么操作，下载相对应的插件，而fis3已经集成好了很多功能。
+二、准备工作1234561、首先要安装node和npm2、安装fis3  --&amp;gt;  npm install -g fis33、测试一下是否安装成功 --&amp;gt;  fis3 -v4、升">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RequireJs">
-<meta property="og:url" content="http://yoursite.com/2015/05/08/requirejs/index.html">
+<meta property="og:title" content="fis3工具">
+<meta property="og:url" content="http://yoursite.com/2017/06/13/fis3学习笔记/index.html">
 <meta property="og:site_name" content="ヾ旧时光">
-<meta property="og:description" content="一、传统代码的缺陷传统的用script标签导入的JS文件，有可能会阻塞页面渲染，而且正常我们开发的时候会导入引入JS文件，都用script标签导入，很容易造成混乱，不容易维护
-二、什么是模块化模块在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。 为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编">
-<meta property="og:updated_time" content="2017-02-08T07:47:56.571Z">
+<meta property="og:description" content="一、fis3是什么，能干什么？FIS3 是面向前端的工程构建工具，可以解决前端中的性能优化，其实也就和gulp差不多，只不过gulp是轻量级的，需要什么操作，下载相对应的插件，而fis3已经集成好了很多功能。
+二、准备工作1234561、首先要安装node和npm2、安装fis3  --&amp;gt;  npm install -g fis33、测试一下是否安装成功 --&amp;gt;  fis3 -v4、升">
+<meta property="og:updated_time" content="2017-06-23T07:43:31.257Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RequireJs">
-<meta name="twitter:description" content="一、传统代码的缺陷传统的用script标签导入的JS文件，有可能会阻塞页面渲染，而且正常我们开发的时候会导入引入JS文件，都用script标签导入，很容易造成混乱，不容易维护
-二、什么是模块化模块在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。 为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编">
+<meta name="twitter:title" content="fis3工具">
+<meta name="twitter:description" content="一、fis3是什么，能干什么？FIS3 是面向前端的工程构建工具，可以解决前端中的性能优化，其实也就和gulp差不多，只不过gulp是轻量级的，需要什么操作，下载相对应的插件，而fis3已经集成好了很多功能。
+二、准备工作1234561、首先要安装node和npm2、安装fis3  --&amp;gt;  npm install -g fis33、测试一下是否安装成功 --&amp;gt;  fis3 -v4、升">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2015/05/08/requirejs/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/13/fis3学习笔记/"/>
 
 
 
 
 
-  <title> RequireJs | ヾ旧时光 </title>
+  <title> fis3工具 | ヾ旧时光 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -295,7 +295,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/05/08/requirejs/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/13/fis3学习笔记/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="WLJ">
@@ -319,7 +319,7 @@
             
             
               
-                RequireJs
+                fis3工具
               
             
           </h1>
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-05-08T11:36:16+08:00">
-                2015-05-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-13T15:42:20+08:00">
+                2017-06-13
               </time>
             
 
@@ -357,8 +357,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
+                  <a href="/categories/框架/" itemprop="url" rel="index">
+                    <span itemprop="name">框架</span>
                   </a>
                 </span>
 
@@ -375,8 +375,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2015/05/08/requirejs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/08/requirejs/" itemprop="commentCount"></span>
+                <a href="/2017/06/13/fis3学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/13/fis3学习笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -384,7 +384,7 @@
 
           
           
-             <span id="/2015/05/08/requirejs/" class="leancloud_visitors" data-flag-title="RequireJs">
+             <span id="/2017/06/13/fis3学习笔记/" class="leancloud_visitors" data-flag-title="fis3工具">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,22 +418,32 @@
       
 
       
-        <h3 id="一、传统代码的缺陷"><a href="#一、传统代码的缺陷" class="headerlink" title="一、传统代码的缺陷"></a>一、传统代码的缺陷</h3><p>传统的用script标签导入的JS文件，有可能会阻塞页面渲染，而且正常我们开发的时候会导入引入JS文件，都用script标签导入，很容易造成混乱，不容易维护</p>
-<h3 id="二、什么是模块化"><a href="#二、什么是模块化" class="headerlink" title="二、什么是模块化"></a>二、什么是模块化</h3><h5 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h5><p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。 为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在Node环境中，一个.js文件就称之为一个模块（module）。<br>随着网页越来越复杂，网页中引入的JS文件也就越来越多，单纯的用<script>引入js文件，已经满足不了我们的需求，我们需要团队协作，模块分离<br>模块化是指在处理某些问题时，按照一种分类或者思想对功能进行模块化管理和使用</p>
-<h5 id="使用模块有什么好处？"><a href="#使用模块有什么好处？" class="headerlink" title="使用模块有什么好处？"></a>使用模块有什么好处？</h5><p>最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括Node内置的模块和来自第三方的模块。</p>
-<p>使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。</p>
-<h3 id="三、模块化编程规范"><a href="#三、模块化编程规范" class="headerlink" title="三、模块化编程规范"></a>三、模块化编程规范</h3><p>NodeJS实现了JavaScript语言编写后台，其中使用CommonJS规范实现了模块化开发<br>模块化开发其实就是让JavaScript文件可以互相引用，每个文档代表一个模块，提高代码的使用频率。<br>在HTML中引入JS文件也会方便很多。<br>原生JavaScript中并不支持模块化开发，出现了一些规范，就是所说的AMD和CMD，这两种方式适合使用桌面端，可以进行异步加载，而在NodeJS中使用CommonJS是同步的，所以CommonJS并不适合桌面端</p>
-<p>在require.js推广的过程中，产生了一种模块化规范，叫AMD</p>
-<p>在sea.js推广的过程中，产生了一种模块化规范，叫CMD</p>
-<p>sea.js是淘宝的前端开发工程师，网名叫玉伯的人编写的。<br>require.js而是国外朋友编写。<br>sea.js是根据CommonJS规范来编写的，和CommonJS语法类似，而require.js的写法则教特殊一些<br>四、requirejs能带来什么好处?<br>看下面的示例:<br>正常编写方式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// index.html</div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"a.js"</span>&gt;&lt;/script&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">      &lt;span&gt;body&lt;/span&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!--a.js:--&gt;</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun1</span></span>()&#123;</div><div class="line">  alert(<span class="string">"it works"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun1();</div></pre></td></tr></table></figure>
-<p>可能你更喜欢这样写</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    <span class="keyword">function</span> <span class="function"><span class="title">fun1</span></span>()&#123;</div><div class="line">      alert(<span class="string">"it works"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    fun1();</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
-<p>第二种方法使用了块作用域来申明function防止污染全局变量，本质还是一样的，当运行上面两种例子时不知道你是否注意到，alert执行的时候，html内容是一片空白的，即<span>body</span>并未被显示，当点击确定后，才出现，这就是JS阻塞浏览器渲染导致的结果。<br>requirejs写法<br>当然首先要到requirejs的网站去下载js </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!--index.html:--&gt;</div><div class="line"></div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"require.js"</span>&gt;&lt;/script&gt;</div><div class="line">        &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">            require([<span class="string">"a"</span>]);</div><div class="line">        &lt;/script&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">      &lt;span&gt;body&lt;/span&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!--a.js:--&gt;</div><div class="line"></div><div class="line">define(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    <span class="keyword">function</span> <span class="function"><span class="title">fun1</span></span>()&#123;</div><div class="line">      alert(<span class="string">"it works"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    fun1();</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</script></p>
+        <h2 id="一、fis3是什么，能干什么？"><a href="#一、fis3是什么，能干什么？" class="headerlink" title="一、fis3是什么，能干什么？"></a>一、fis3是什么，能干什么？</h2><p>FIS3 是面向前端的工程构建工具，可以解决前端中的性能优化，其实也就和gulp差不多，只不过gulp是轻量级的，需要什么操作，下载相对应的插件，而fis3已经集成好了很多功能。</p>
+<h2 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1、首先要安装node和npm</div><div class="line">2、安装fis3  --&gt;  npm install -g fis3</div><div class="line">3、测试一下是否安装成功 --&gt;  fis3 -v</div><div class="line">4、升级fis3</div><div class="line">npm update -g fis3</div><div class="line">或者重装 --&gt; npm install -g fis3</div></pre></td></tr></table></figure>
+<h2 id="三、熟悉fis3里面的命令"><a href="#三、熟悉fis3里面的命令" class="headerlink" title="三、熟悉fis3里面的命令"></a>三、熟悉fis3里面的命令</h2><p>fis3里面内置了一个简易的web server，可以方便调试构建结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1、fis3 server open --&gt;打开web server的根目录（www目录）</div><div class="line">2、fis3 release   --&gt;将构建结果发布到web server 的目录下面</div><div class="line">3、fis3 release <span class="_">-d</span> +路径  --&gt;构建结果发布到指定的目录下面</div><div class="line">4、fis3 server  start   --&gt;启动本地web server（浏览器将会被打开）</div><div class="line">5、fis3 release -w   --&gt;启动文件监听功能</div><div class="line">6、fis3 release -wl   --&gt;浏览器自动刷新</div><div class="line">7、fis3 server -h  --&gt;获取更多参数</div><div class="line">8、fis3 server clean  --&gt; 清空web server下面的www目录</div><div class="line">9、fis3 inspect 可以查看每个文件对应分配到的属性。</div></pre></td></tr></table></figure>
+<h2 id="四、fis3配置文件（fis-conf-js）"><a href="#四、fis3配置文件（fis-conf-js）" class="headerlink" title="四、fis3配置文件（fis-conf.js）"></a>四、fis3配置文件（fis-conf.js）</h2><p>说明：FIS3 编译的整个流程都是通过配置来控制的。FIS3 定义了一种类似 CSS 的配置方式。固化了构建流程，让工程构建变得简单。（也就是说fis-conf.js文件上面存放所有构建指令，如压缩资源、文件指纹等等操作，通过在终端之行fis3 release -d 就会根据fis-conf.js中的指令进行构建，把结果发布到web server的www目录下面。）<br>配置接口：fis.match(selector, props);<br>参数说明：<br>selector：FIS3 把匹配文件路径的路径作为selector，匹配到的文件会分配给它设置的props。<br>props：编译规则属性，包括文件属性和插件属性<br>fis.media()：此接口提供多种状态状态功能（有些配置是仅供开发环境下使用，有些则是仅供生产环境使用）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">fis.media(<span class="string">'rd'</span>).match(<span class="string">'*'</span>, &#123;</div><div class="line">    　　deploy: fis.plugin(<span class="string">'http-push'</span>, &#123;</div><div class="line">    　　　　receiver: <span class="string">'http://remote-rd-host/receiver.php'</span></div><div class="line">    　　&#125;)</div><div class="line">    &#125;);</div><div class="line">fis.media(<span class="string">'qa'</span>).match(<span class="string">'*'</span>, &#123;</div><div class="line">　　deploy: fis.plugin(<span class="string">'http-push'</span>, &#123;</div><div class="line">　　　　receiver: <span class="string">'http://remote-qa-host/receiver.php'</span></div><div class="line">　　&#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>终端执行：  </p>
+<p>  ● fis3 release rd push 到 RD 的远端机器上<br>  ● fis3 release qa push 到 QA 的远端机器上<br>1、资源定位：进行构建发布之后，我们可以发现构建结果中的路径进行了替换（如html中引用的js，css文件其引用路径发生变换），有原来的相对路径变成了绝对路径。这就是fis的一个重要特性，资源定位。<br>注意：我们还可以通过配置指令，将所有静态资源构建到指定目录下：<br>如：<br>　　<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fis.match(<span class="string">'*.&#123;png,js,css&#125;'</span>, &#123;</div><div class="line">　　　　release: <span class="string">'/static/$0'</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>执行fis3 release -d ./output<br>构建结果如下：</p>
+<p>2、文件指纹（唯一表示一个文件）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fis.match(<span class="string">'*.&#123;js,css,png&#125;'</span>, &#123;</div><div class="line">　　useHash: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>3、压缩资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">fis.match(<span class="string">'*.js'</span>, &#123; //js压缩</div><div class="line">　　// fis-optimizer-uglify-js 插件进行压缩，已内置</div><div class="line">　　optimizer: fis.plugin(<span class="string">'uglify-js'</span>)</div><div class="line">&#125;);</div><div class="line">fis.match(<span class="string">'*.scss'</span>, &#123; //css压缩</div><div class="line">　　// fis-optimizer-clean-css 插件进行压缩，已内置</div><div class="line">　　optimizer: fis.plugin(<span class="string">'clean-css'</span>)</div><div class="line">&#125;);</div><div class="line">fis.match(<span class="string">'*.png'</span>, &#123; //图片压缩</div><div class="line">　　// fis-optimizer-png-compressor 插件进行压缩，已内置</div><div class="line">　　optimizer: fis.plugin(<span class="string">'png-compressor'</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>4、cssSprite图片合并<br>//只需要把css中引用的图片后缀改成 XXX.png?<strong>sprite，实际的图片不需要改名字，（实现的原理就是css处的?</strong>sprite就是一个让插件认识的标识符，插件会根据这个标识符进行图片合并处理，并生成对应样式）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fis.match(<span class="string">'::package'</span>, &#123; // 启用 fis-spriter-csssprites 插件,需下载插件</div><div class="line">　　spriter: fis.plugin(<span class="string">'csssprites'</span>)</div><div class="line">&#125;)</div><div class="line">fis.match(<span class="string">'*.scss'</span>, &#123; // 对 CSS 进行图片合并</div><div class="line">　　useSprite: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>5、编译sass文件<br>//涉及到插件安装。<br>//安装方式尝试 :<br>//1、npm install fis-parser-node-sass -g</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fis.match(<span class="string">'*.scss'</span>, &#123;</div><div class="line">　　release:<span class="string">'/static/css$0'</span>,</div><div class="line">　　rExt: <span class="string">'.css'</span>,</div><div class="line">　　parser: fis.plugin(<span class="string">'node-sass'</span>, &#123;</div><div class="line">　　// options...</div><div class="line">　　&#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>6、有些时候在某种情况下面不需要使用文件指纹图片合并等操做，可以使用如下方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fis.media(<span class="string">'debug'</span>).match(<span class="string">'*.&#123;js,scss,png&#125;'</span>, &#123; //终端执行 fis3 release debug</div><div class="line">　　useHash: <span class="literal">false</span>,</div><div class="line">　　useSprite: <span class="literal">false</span>,</div><div class="line">　　optimizer: null</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>终端执行：fis3 release debug<br>五、嵌入资源（内容嵌入）<br>给资源加?_inline参数来标记资源嵌入需求<br>1、在html中嵌入资源  文件后面＋?__inline（图片变成base64位,js,css会在html里面）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">--&gt;   &lt;link rel=<span class="string">"stylesheet"</span> <span class="built_in">type</span>=<span class="string">"text/css"</span> href=<span class="string">"demo.css?__inline"</span>&gt;</div><div class="line">--&gt;   &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"demo.js?__inline"</span>&gt;&lt;/script&gt;</div><div class="line">--&gt;   &lt;img title=<span class="string">"百度logo"</span> src=<span class="string">"images/logo.gif?__inline"</span>/&gt;</div></pre></td></tr></table></figure>
+<p>2、在js中嵌入资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">--&gt;   var img = __inline(<span class="string">'images/logo.gif'</span>); </div><div class="line">--&gt;   var css = __inline(<span class="string">'a.css'</span>);</div><div class="line">--&gt;   __inline(<span class="string">'demo.js'</span>);</div></pre></td></tr></table></figure>
+<p>3、在css中嵌入资源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">--&gt;   @import url(<span class="string">'demo.css?__inline'</span>);</div><div class="line">--&gt; .style &#123; background: url(images/logo.gif?__inline); &#125;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -477,7 +487,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+            <a href="/tags/框架/" rel="tag"># 框架</a>
           
         </div>
       
@@ -490,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/02/11/gulpjs/" rel="next" title="GulpJs">
-                <i class="fa fa-chevron-left"></i> GulpJs
+              <a href="/2017/02/08/node.js/" rel="next" title="NodeJs">
+                <i class="fa fa-chevron-left"></i> NodeJs
               </a>
             
           </div>
@@ -499,10 +509,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/06/11/设计模式/" rel="prev" title="设计模式">
-                设计模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -528,8 +534,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/05/08/requirejs/"
-           data-title="RequireJs" data-url="http://yoursite.com/2015/05/08/requirejs/">
+      <div class="ds-thread" data-thread-key="2017/06/13/fis3学习笔记/"
+           data-title="fis3工具" data-url="http://yoursite.com/2017/06/13/fis3学习笔记/">
       </div>
     
   </div>
@@ -683,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、传统代码的缺陷"><span class="nav-number">1.</span> <span class="nav-text">一、传统代码的缺陷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、什么是模块化"><span class="nav-number">2.</span> <span class="nav-text">二、什么是模块化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#模块"><span class="nav-number">2.0.1.</span> <span class="nav-text">模块</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、fis3是什么，能干什么？"><span class="nav-number">1.</span> <span class="nav-text">一、fis3是什么，能干什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、准备工作"><span class="nav-number">2.</span> <span class="nav-text">二、准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、熟悉fis3里面的命令"><span class="nav-number">3.</span> <span class="nav-text">三、熟悉fis3里面的命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、fis3配置文件（fis-conf-js）"><span class="nav-number">4.</span> <span class="nav-text">四、fis3配置文件（fis-conf.js）</span></a></li></ol></div>
             
 
           </div>
